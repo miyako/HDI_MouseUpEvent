@@ -1,4 +1,4 @@
-C_TEXT:C284($vers)
+var $vers : Text
 
 Case of 
 		

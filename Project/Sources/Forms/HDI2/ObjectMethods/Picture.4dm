@@ -46,7 +46,7 @@ Case of
 				
 			Else 
 				
-				C_LONGINT:C283($new_x; $new_y)
+				var $new_x; $new_y : Integer
 				$new_x:=mouseX-drag_org_X
 				$new_y:=mouseY-drag_org_Y
 				If ((mouseX=-1) | (mouseY=-1))

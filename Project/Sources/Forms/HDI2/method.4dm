@@ -21,13 +21,13 @@ Case of
 		ARRAY TEXT:C222(SVG_Col2; 0)
 		
 		// advanced example
-		C_BOOLEAN:C305(timer; tracking)
-		C_PICTURE:C286(drag_dimmed; vPicture; drag_src; src)
-		C_LONGINT:C283(src_width; src_height)  // size of background image
-		C_LONGINT:C283(drag_org_X; drag_org_Y)  // click position in the image to be drag
-		C_LONGINT:C283(drag_src_width; drag_src_height)  // size of the image to be drag
-		C_LONGINT:C283(pos_x; pos_y)  //size of the image
-		C_LONGINT:C283(drag_pos_x; drag_pos_y)  //position of the image during the drag
+		var timer; tracking : Boolean
+		var drag_dimmed; vPicture; drag_src; src : Picture
+		var src_width; src_height : Integer  // size of background image
+		var drag_org_X; drag_org_Y : Integer  // click position in the image to be drag
+		var drag_src_width; drag_src_height : Integer  // size of the image to be drag
+		var pos_x; pos_y : Integer  //size of the image
+		var drag_pos_x; drag_pos_y : Integer  //position of the image during the drag
 		
 		timer:=False:C215
 		pos_x:=0
