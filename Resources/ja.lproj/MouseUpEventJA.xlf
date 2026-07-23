@@ -70,6 +70,18 @@
         <source>... use the new event &quot;On Mouse Up&quot;?</source>
         <target>... &quot;On Mouse Up&quot;イベント?</target>
       </trans-unit>
+      <trans-unit id="HDI_Title" resname="HDI_Title">
+        <source>On Mouse Up Event</source>
+        <target>On Mouse Upイベント</target>
+      </trans-unit>
+      <trans-unit id="HDI_Info" resname="HDI_Info">
+        <source>... use the new event &quot;On Mouse Up&quot;?</source>
+        <target>... &quot;On Mouse Up&quot;イベント?</target>
+      </trans-unit>
+      <trans-unit id="BtnClose" resname="BtnClose">
+        <source>Close</source>
+        <target>閉じる</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -104,6 +104,7 @@
 					"text": ":xliff:Demo",
 					"focusable": false,
 					"defaultButton": true,
+					"method": "ObjectMethods/BtnDemo.4dm",
 					"events": [
 						"onClick"
 					]
