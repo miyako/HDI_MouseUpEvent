@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 #DECLARE($tracking : Boolean; $objectName : Text; $targetPict : Pointer; $background : Picture; $dragImage : Picture; $outPosX : Pointer; $outPosY : Pointer)
 
 var $pos_x; $pos_y : Pointer

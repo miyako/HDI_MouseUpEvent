@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 #DECLARE($eventCode : Integer; $col : Integer)
 
 var $ev : Text
