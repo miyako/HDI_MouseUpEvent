@@ -20,6 +20,7 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 | [`miyako-menu-standard-actions`](../../tree/miyako-menu-standard-actions) | Migrate menu bar to use standard actions | [menu.instructions.md](.github/copilot/instructions/menu.instructions.md) |
 | [`miyako-refactored-system`](../../tree/miyako-refactored-system) | Hide methods in Run Method dialog | [method.visibility.instructions.md](.github/copilot/instructions/method.visibility.instructions.md) |
 | [`miyako-modernise-startup-dialog`](../../tree/miyako-modernise-startup-dialog) | Modernise startup dialog | [startup.instructions.md](.github/copilot/instructions/startup.instructions.md) |
+| [`miyako-dark-mode-liquid-glass`](../../tree/miyako-dark-mode-liquid-glass) | Dark mode + liquid glass CSS styling | [css.instructions.md](.github/copilot/instructions/css.instructions.md), [tahoe.css.instructions.md](.github/copilot/instructions/tahoe.css.instructions.md) |
 
 ## Copilot Token Usage
 
@@ -30,7 +31,8 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 | Menu actions migration | `miyako-menu-standard-actions` | Claude Sonnet 5 | 1,299,064 | 7,244 | 23 |
 | Hide methods in Run Method dialog | `miyako-refactored-system` | Claude Sonnet 5 | 972,747 | 6,661 | 17 |
 | Modernise startup dialog | `miyako-modernise-startup-dialog` | Claude Opus 4.6 | 1,399,941 | 9,514 | 28 |
-| **Total** | | | **8,605,811** | **58,830** | **143** |
+| Dark mode + liquid glass | `miyako-dark-mode-liquid-glass` | Claude Sonnet 5 | 4,884,992 | 32,893 | 51 |
+| **Total** | | | **13,490,803** | **91,723** | **194** |
 
 ## Model Selection Assessment
 
@@ -43,6 +45,8 @@ The menu actions migration was a well-scoped task -- replacing custom menu metho
 The method visibility task involved setting JSON attributes on method files to hide subroutines from the Run Method dialog -- a simple, mechanical edit. Claude Sonnet 5 was used, which was appropriate though Haiku 4.5 might have sufficed for this trivial property-setting task.
 
 The startup dialog modernisation involved updating form objects and associated method logic for the application's startup workflow. Claude Opus 4.6 was used. This was a moderate task with some UI/form reasoning, but Sonnet 5 would likely have been sufficient given the clear instruction file.
+
+The dark mode and liquid glass session was the largest by token count (4.9M input, 51 turns), involving CSS stylesheet generation with dark mode media queries and macOS Tahoe liquid glass adaptations. Claude Sonnet 5 was used, which was appropriate -- this was a moderate task with clear instruction files, though the high turn count suggests iterative refinement.
 
 **Recommendation:** Use Sonnet 5 for structured file generation, mechanical refactors, and rule-driven migrations. Reserve Opus for tasks requiring cross-file architectural reasoning or novel domain knowledge.
 
