@@ -16,7 +16,7 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 | Branch | Description | Instructions |
 |--------|-------------|--------------|
 | [`miyako-add-xliff-localisation`](../../tree/miyako-add-xliff-localisation) | Add XLIFF localisation: English source file and fix Japanese XLIFF | [localisation.instructions.md](.github/copilot/instructions/localisation.instructions.md) |
-| [`miyako-studious-invention`](../../tree/miyako-studious-invention) | Modernize c_* declarations to var syntax | [variable.declarations.instructions.md](.github/copilot/instructions/variable.declarations.instructions.md) |
+| [`miyako-studious-invention`](../../tree/miyako-studious-invention) | Modernise c_* declarations to var syntax | [variable.declarations.instructions.md](.github/copilot/instructions/variable.declarations.instructions.md) |
 | [`miyako-menu-standard-actions`](../../tree/miyako-menu-standard-actions) | Migrate menu bar to use standard actions | [menu.instructions.md](.github/copilot/instructions/menu.instructions.md) |
 | [`miyako-refactored-system`](../../tree/miyako-refactored-system) | Hide methods in Run Method dialog | [method.visibility.instructions.md](.github/copilot/instructions/method.visibility.instructions.md) |
 | [`miyako-modernise-startup-dialog`](../../tree/miyako-modernise-startup-dialog) | Modernise startup dialog | [startup.instructions.md](.github/copilot/instructions/startup.instructions.md) |
