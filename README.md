@@ -17,6 +17,7 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 |--------|-------------|--------------|
 | [`miyako-add-xliff-localisation`](../../tree/miyako-add-xliff-localisation) | Add XLIFF localisation: English source file and fix Japanese XLIFF | [localisation.instructions.md](.github/copilot/instructions/localisation.instructions.md) |
 | [`miyako-studious-invention`](../../tree/miyako-studious-invention) | Modernize c_* declarations to var syntax | [variable.declarations.instructions.md](.github/copilot/instructions/variable.declarations.instructions.md) |
+| [`miyako-menu-standard-actions`](../../tree/miyako-menu-standard-actions) | Migrate menu bar to use standard actions | [menu.instructions.md](.github/copilot/instructions/menu.instructions.md) |
 
 ## Copilot Token Usage
 
@@ -24,7 +25,8 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 |---------|--------|----------|-------------:|--------------:|------:|
 | Xliff localisation | `miyako-add-xliff-localisation` | Claude Opus 4.6 | 2,587,222 | 16,996 | 42 |
 | Modernize c_* declarations | `miyako-studious-invention` | Claude Sonnet 5 | 2,346,837 | 18,415 | 33 |
-| **Total** | | | **4,934,059** | **35,411** | **75** |
+| Menu actions migration | `miyako-menu-standard-actions` | Claude Sonnet 5 | 1,299,064 | 7,244 | 23 |
+| **Total** | | | **6,233,123** | **42,655** | **98** |
 
 ## Model Selection Assessment
 
@@ -32,6 +34,8 @@ The XLIFF localisation task involved understanding 4D project structure, parsing
 
 The declarations modernisation task was a mechanical find-and-replace refactor -- converting legacy `C_*` type declarations to modern `var` syntax across all methods. Claude Sonnet 5 was used, which was an appropriate choice for this pattern-based, repetitive task.
 
-**Recommendation:** Use Sonnet 5 for structured file generation and mechanical refactors. Reserve Opus for tasks requiring cross-file architectural reasoning or novel domain knowledge.
+The menu actions migration was a well-scoped task -- replacing custom menu method calls with 4D standard actions, guided by a clear instruction file. Claude Sonnet 5 was used, which was appropriate for this moderate, rule-driven refactor.
+
+**Recommendation:** Use Sonnet 5 for structured file generation, mechanical refactors, and rule-driven migrations. Reserve Opus for tasks requiring cross-file architectural reasoning or novel domain knowledge.
 
 ## Screenshots
