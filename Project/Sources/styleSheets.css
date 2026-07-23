@@ -12,14 +12,14 @@
 
 @media (prefers-color-scheme: light) {
 	.ref-svg-colour {
-		fill: #FFFFFF;
+		fill: #000000;
 		visibility: hidden;
 	}
 }
 
 @media (prefers-color-scheme: dark) {
 	.ref-svg-colour {
-		fill: #000000;
+		fill: #FFFFFF;
 		visibility: hidden;
 	}
 }
