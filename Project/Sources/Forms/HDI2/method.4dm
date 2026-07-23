@@ -52,6 +52,10 @@ Case of
 		svgRef:=SVG_New(500; 500)
 		vPictSvg:=SVG_Export_to_picture(svgRef)
 		
+		var $svgFg; $svgBg : Integer
+		OBJECT GET RGB COLORS:C1074(*; "refSvgRectColour"; $svgFg; $svgBg)
+		vSvgFillColor:=RGBToHex($svgBg)
+		
 		orig_X:=-1
 		orig_Y:=-1
 		

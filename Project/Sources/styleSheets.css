@@ -9,3 +9,17 @@
 		stroke: #FF8A5C;
 	}
 }
+
+@media (prefers-color-scheme: light) {
+	.ref-svg-colour {
+		fill: #FFFFFF;
+		visibility: hidden;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.ref-svg-colour {
+		fill: #000000;
+		visibility: hidden;
+	}
+}

@@ -50,6 +50,15 @@
 					"events": [
 						"onClick"
 					]
+				},
+				"refSvgRectColour": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1,
+					"height": 1,
+					"class": "ref-svg-colour",
+					"stroke": "transparent"
 				}
 			}
 		},
