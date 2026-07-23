@@ -1,2 +1,18 @@
-# HDI_Template
-Template for old HDI converted to project
+# HDI_MouseUpEvent
+
+A 4D v16 **HDI** (How Do I) binary database demonstrating a new form event, converted to a 4D project using 4D 21. The codebase was then updated and cleaned up with the help of **GitHub Copilot**.
+
+## Origin
+
+This project started as a binary `.4DB` example database originally distributed with 4D v16. It was converted to the modern project architecture (`.4DProject`) using 4D 21's built-in binary-to-project conversion tool.
+
+- **Blog post:** [New “On mouse up” event for picture object](https://blog.4d.com/new-on-mouse-up-event-for-picture-object/)
+- **Original download:** [HDI_Mouse_Up_Event.zip](https://downloads.4d.com/Demos/4D_v17/HDI_Mouse_Up_Event.zip)
+
+## Branches
+
+## Copilot Token Usage
+
+## Model Selection Assessment
+
+## Screenshots
