@@ -51,3 +51,8 @@ The dark mode and liquid glass session was the largest by token count (4.9M inpu
 **Recommendation:** Use Sonnet 5 for structured file generation, mechanical refactors, and rule-driven migrations. Reserve Opus for tasks requiring cross-file architectural reasoning or novel domain knowledge.
 
 ## Screenshots
+
+<img width="360" height="352" alt="Screenshot 2026-07-23 at 12 26 20" src="https://github.com/user-attachments/assets/d76b42d4-150b-4633-8d75-76c3b04cf978" />
+<img width="720" height="572" alt="Screenshot 2026-07-23 at 12 26 51" src="https://github.com/user-attachments/assets/474b8471-b920-4307-b40e-5b54d032ee80" />
+<img width="720" height="572" alt="Screenshot 2026-07-23 at 12 26 35" src="https://github.com/user-attachments/assets/047e6728-8b05-4e38-b881-1aef18ae1752" />
+<img width="720" height="572" alt="Screenshot 2026-07-23 at 12 26 45" src="https://github.com/user-attachments/assets/36949cf7-5a83-43fa-9ba2-5b96e123599d" />
