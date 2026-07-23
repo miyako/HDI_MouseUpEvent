@@ -1,0 +1,404 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 720,
+	"windowMinHeight": 540,
+	"width": 720,
+	"height": 540,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onUnload",
+		"onTimer",
+		"onAfterEdit",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 680,
+					"height": 500,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "TabControl",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						":xliff:Page 1",
+						":xliff:Page 2",
+						":xliff:Page 3"
+					],
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Variable": {
+					"type": "input",
+					"top": 70,
+					"left": 40,
+					"width": 640,
+					"height": 430,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Var1",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 222,
+					"left": 85,
+					"width": 534,
+					"height": 210,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/propertyList.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"PictSvg": {
+					"type": "input",
+					"top": 153,
+					"left": 308,
+					"width": 372,
+					"height": 346,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vPictSvg",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/PictSvg.4dm",
+					"events": [
+						"onMouseUp",
+						"onClick",
+						"onMouseMove"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 60,
+					"left": 40,
+					"width": 640,
+					"height": 33,
+					"sizingX": "grow",
+					"dataSource": "Var2",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 119,
+					"left": 572,
+					"width": 108,
+					"height": 22,
+					"sizingX": "move",
+					"text": ":xliff:Clear SVG",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"top": 153,
+					"left": 40,
+					"width": 238,
+					"height": 347,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "List Box",
+					"focusable": true,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"scrollbarHorizontal": "hidden",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"movableRows": false,
+					"sortable": false,
+					"staticColumnCount": 2,
+					"hideFocusRing": true,
+					"columns": [
+						{
+							"name": "SVG_Col1",
+							"dataSource": "SVG_Col1",
+							"width": 113,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": ":xliff:Event",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer3",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "SVG_Col2",
+							"dataSource": "SVG_Col2",
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": ":xliff:Coordinates",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer4",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						}
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 119,
+					"left": 201,
+					"width": 77,
+					"height": 22,
+					"text": ":xliff:Clear",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Picture": {
+					"type": "input",
+					"top": 124,
+					"left": 308,
+					"width": 372,
+					"height": 376,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vPicture",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Picture.4dm",
+					"events": [
+						"onMouseUp",
+						"onClick",
+						"onDataChange",
+						"onMouseEnter",
+						"onMouseLeave",
+						"onMouseMove"
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"top": 153,
+					"left": 40,
+					"width": 238,
+					"height": 347,
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"dataSource": "List Box",
+					"focusable": true,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"scrollbarHorizontal": "hidden",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"hideFocusRing": true,
+					"sortable": false,
+					"movableRows": false,
+					"staticColumnCount": 2,
+					"columns": [
+						{
+							"name": "Move_Col1",
+							"dataSource": "Move_Col1",
+							"width": 113,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": ":xliff:Event",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer1",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Move_Col2",
+							"dataSource": "Move_Col2",
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": ":xliff:Coordinates",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer2",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						}
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 119,
+					"left": 201,
+					"width": 77,
+					"height": 22,
+					"text": ":xliff:Clear",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 60,
+					"left": 40,
+					"width": 640,
+					"height": 33,
+					"sizingX": "grow",
+					"dataSource": "Var3",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 1,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

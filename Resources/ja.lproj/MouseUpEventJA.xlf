@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <file datatype="x-STR#" original="undefined" product-version="v16" source-language="en-US" target-language="ja">
+    <header>
+      <note/>
+    </header>
+    <body>
+      <group resname="HDI">
+        <!-- common stuff -->
+        <trans-unit resname="Quit 4D">
+          <source>Quit 4D</source>
+          <target>終了する</target>
+        </trans-unit>
+        <trans-unit resname="Demo">
+          <source>Demo</source>
+          <target>スタート</target>
+        </trans-unit>
+        <trans-unit resname="(4D v16 and above...)">
+          <source>(4D v16 and above...)</source>
+          <target>(4D v16 以降...)</target>
+        </trans-unit>
+        <trans-unit resname="How Do I...">
+          <source>How Do I...</source>
+          <target>教えて...</target>
+        </trans-unit>
+        <trans-unit resname="Demo...">
+          <source>Demo...</source>
+          <target>デモンストレーション...</target>
+        </trans-unit>
+        <trans-unit resname="The plugin xxx is mandatory">
+          <source>The plugin xxx is mandatory</source>
+          <target>プラグインxxxが必要です。</target>
+        </trans-unit>
+        <trans-unit resname="Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.">
+          <source>Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.</source>
+          <target>このHDIをデザインモードで開いてはなりません。開いてしまった場合，フォームやメソッドが不完全になってしまう恐れがあります。</target>
+        </trans-unit>
+        <trans-unit resname="Sorry">
+          <source>Sorry, this &quot;How do I...&quot; (HDI) &#x0D;example must be used with&#x0D;a newer version of 4D&#x0D;(v16 and above).</source>
+          <target>申し訳ありません。この&quot;How do I...&quot; (HDI) &#x0D;サンプルは，より新しいバージョンの4D（v16以降）で開かなければなりません。</target>
+        </trans-unit>
+        <!-- specific stuff -->
+        <trans-unit resname="... use DISTINCT VALUE with count (new parameter)?">
+          <source>... use DISTINCT VALUE with count (new parameter)?</source>
+          <target>... DISTINCT VALUEの新しい引数を活用するには?</target>
+        </trans-unit>
+        <trans-unit resname="Page 1">
+          <source>Page 1</source>
+          <target>ページ 1</target>
+        </trans-unit>
+        <trans-unit resname="Page 2">
+          <source>Page 2</source>
+          <target>ページ 2</target>
+        </trans-unit>
+        <trans-unit resname="Page 3">
+          <source>Page 3</source>
+          <target>ページ 3</target>
+        </trans-unit>
+        <trans-unit resname="Clear">
+          <source>Clear</source>
+          <target>クリア</target>
+        </trans-unit>
+        <trans-unit resname="Clear SVG">
+          <source>Clear SVG</source>
+          <target>SVGをクリア</target>
+        </trans-unit>
+        <trans-unit resname="Event">
+          <source>Event</source>
+          <target>イベント</target>
+        </trans-unit>
+        <trans-unit resname="Coordinates">
+          <source>Coordinates</source>
+          <target>座標</target>
+        </trans-unit>
+        <trans-unit resname="... use the new event &quot;On Mouse Up&quot;?">
+          <source>... use the new event &quot;On Mouse Up&quot;?</source>
+          <target>... &quot;On Mouse Up&quot;イベント?</target>
+        </trans-unit>
+
+
+
+
+      </group>
+    </body>
+  </file>
+</xliff>
