@@ -1,0 +1,11 @@
+@media (prefers-color-scheme: light) {
+	.warning {
+		stroke: #FF4D00;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.warning {
+		stroke: #FF8A5C;
+	}
+}

@@ -30,6 +30,7 @@
 					"width": 280,
 					"height": 57,
 					"class": "HDI",
+					"stroke": "automatic",
 					"fontWeight": "bold",
 					"text": ":xliff:... use the new event \"On Mouse Up\"?"
 				},
@@ -48,6 +49,7 @@
 					"left": 120,
 					"width": 220,
 					"height": 14,
+					"stroke": "automatic",
 					"fontTheme": "additional",
 					"text": ":xliff:(4D v16 and above...)"
 				},
@@ -58,7 +60,7 @@
 					"width": 320,
 					"height": 81,
 					"visibility": "hidden",
-					"stroke": "#FF4D00",
+					"class": "warning",
 					"textAlign": "left",
 					"text": ":xliff:Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality."
 				},
@@ -69,6 +71,7 @@
 					"width": 151,
 					"height": 18,
 					"class": "HDI",
+					"stroke": "automatic",
 					"fontWeight": "bold",
 					"text": ":xliff:How Do I..."
 				},
@@ -79,6 +82,7 @@
 					"width": 320,
 					"height": 81,
 					"visibility": "hidden",
+					"stroke": "automatic",
 					"textAlign": "center",
 					"fontWeight": "bold",
 					"text": ":xliff:Sorry"
@@ -90,7 +94,7 @@
 					"width": 227,
 					"height": 33,
 					"visibility": "hidden",
-					"stroke": "#FF4D00",
+					"class": "warning",
 					"textAlign": "left",
 					"text": ":xliff:The plugin xxx is mandatory"
 				},
@@ -99,7 +103,7 @@
 					"top": 280,
 					"left": 250,
 					"width": 90,
-					"height": 20,
+					"class": "default",
 					"action": "accept",
 					"text": ":xliff:Demo",
 					"focusable": false,
