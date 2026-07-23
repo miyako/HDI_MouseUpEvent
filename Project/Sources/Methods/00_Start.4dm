@@ -1,8 +1,8 @@
 //%attributes = {}
 SET MENU BAR:C67(1)
 
-C_TEXT:C284($1)
-C_LONGINT:C283($window)
+#DECLARE($title : Text)
+var $window : Integer
 
 Case of 
 	: (Count parameters:C259=0)
@@ -12,7 +12,7 @@ Case of
 	Else 
 		
 		Case of 
-			: ($1="Title")
+			: ($title="Title")
 				
 				$window:=Open form window:C675("HDI"; \
 					Plain form window:K39:10; \
@@ -26,7 +26,7 @@ Case of
 				
 				CLOSE WINDOW:C154($window)
 				
-			: ($1="HDI")
+			: ($title="HDI")
 				
 				$window:=Open form window:C675("HDI2"; \
 					Plain form window:K39:10; \

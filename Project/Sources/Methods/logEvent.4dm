@@ -1,40 +1,40 @@
 //%attributes = {}
-C_LONGINT:C283($1; $2)
+#DECLARE($eventCode : Integer; $col : Integer)
 
-C_TEXT:C284($ev)
-C_BOOLEAN:C305($appendCoords)
+var $ev : Text
+var $appendCoords : Boolean
 $appendCoords:=False:C215
 
 Case of 
-	: $1=On Clicked:K2:4
+	: $eventCode=On Clicked:K2:4
 		$ev:="On Clicked"
 		$appendCoords:=True:C214
-	: $1=On Double Clicked:K2:5
+	: $eventCode=On Double Clicked:K2:5
 		$ev:="On Clicked"
 		$appendCoords:=True:C214
-	: $1=On Mouse Move:K2:35
+	: $eventCode=On Mouse Move:K2:35
 		$ev:="On Mouse Move"
 		$appendCoords:=True:C214
-	: $1=On Mouse Enter:K2:33
+	: $eventCode=On Mouse Enter:K2:33
 		$ev:="On Mouse Enter"
 		$appendCoords:=True:C214
-	: $1=On Mouse Leave:K2:34
+	: $eventCode=On Mouse Leave:K2:34
 		$ev:="On Mouse Leave"
 		$appendCoords:=True:C214
-	: $1=On Mouse Up:K2:58
+	: $eventCode=On Mouse Up:K2:58
 		$ev:="On Mouse Up"
 		$appendCoords:=True:C214
-	: $1=On Activate:K2:9
+	: $eventCode=On Activate:K2:9
 		$ev:="On Activate"
-	: $1=On Deactivate:K2:10
+	: $eventCode=On Deactivate:K2:10
 		$ev:="On Deactivate"
-	: $1=On Timer:K2:25
+	: $eventCode=On Timer:K2:25
 		$ev:="On Timer"
 End case 
 
 If ($ev#"")
 	
-	If ($2=0)
+	If ($col=0)
 		LISTBOX INSERT ROWS:C913(*; "List Box"; 1)
 		If ($ev="On Mouse Up")
 			LISTBOX SET ROW COLOR:C1270(*; "List Box"; 1; 0x00FF00FF)
