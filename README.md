@@ -19,6 +19,7 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 | [`miyako-studious-invention`](../../tree/miyako-studious-invention) | Modernize c_* declarations to var syntax | [variable.declarations.instructions.md](.github/copilot/instructions/variable.declarations.instructions.md) |
 | [`miyako-menu-standard-actions`](../../tree/miyako-menu-standard-actions) | Migrate menu bar to use standard actions | [menu.instructions.md](.github/copilot/instructions/menu.instructions.md) |
 | [`miyako-refactored-system`](../../tree/miyako-refactored-system) | Hide methods in Run Method dialog | [method.visibility.instructions.md](.github/copilot/instructions/method.visibility.instructions.md) |
+| [`miyako-modernise-startup-dialog`](../../tree/miyako-modernise-startup-dialog) | Modernise startup dialog | [startup.instructions.md](.github/copilot/instructions/startup.instructions.md) |
 
 ## Copilot Token Usage
 
@@ -28,7 +29,8 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 | Modernize c_* declarations | `miyako-studious-invention` | Claude Sonnet 5 | 2,346,837 | 18,415 | 33 |
 | Menu actions migration | `miyako-menu-standard-actions` | Claude Sonnet 5 | 1,299,064 | 7,244 | 23 |
 | Hide methods in Run Method dialog | `miyako-refactored-system` | Claude Sonnet 5 | 972,747 | 6,661 | 17 |
-| **Total** | | | **7,205,870** | **49,316** | **115** |
+| Modernise startup dialog | `miyako-modernise-startup-dialog` | Claude Opus 4.6 | 1,399,941 | 9,514 | 28 |
+| **Total** | | | **8,605,811** | **58,830** | **143** |
 
 ## Model Selection Assessment
 
@@ -39,6 +41,8 @@ The declarations modernisation task was a mechanical find-and-replace refactor -
 The menu actions migration was a well-scoped task -- replacing custom menu method calls with 4D standard actions, guided by a clear instruction file. Claude Sonnet 5 was used, which was appropriate for this moderate, rule-driven refactor.
 
 The method visibility task involved setting JSON attributes on method files to hide subroutines from the Run Method dialog -- a simple, mechanical edit. Claude Sonnet 5 was used, which was appropriate though Haiku 4.5 might have sufficed for this trivial property-setting task.
+
+The startup dialog modernisation involved updating form objects and associated method logic for the application's startup workflow. Claude Opus 4.6 was used. This was a moderate task with some UI/form reasoning, but Sonnet 5 would likely have been sufficient given the clear instruction file.
 
 **Recommendation:** Use Sonnet 5 for structured file generation, mechanical refactors, and rule-driven migrations. Reserve Opus for tasks requiring cross-file architectural reasoning or novel domain knowledge.
 
