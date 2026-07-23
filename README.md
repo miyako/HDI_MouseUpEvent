@@ -27,7 +27,7 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 | Session | Branch | Model(s) | Input Tokens | Output Tokens | Turns |
 |---------|--------|----------|-------------:|--------------:|------:|
 | Xliff localisation | `miyako-add-xliff-localisation` | Claude Opus 4.6 | 2,587,222 | 16,996 | 42 |
-| Modernize c_* declarations | `miyako-studious-invention` | Claude Sonnet 5 | 2,346,837 | 18,415 | 33 |
+| Modernise c_* declarations | `miyako-studious-invention` | Claude Sonnet 5 | 2,346,837 | 18,415 | 33 |
 | Menu actions migration | `miyako-menu-standard-actions` | Claude Sonnet 5 | 1,299,064 | 7,244 | 23 |
 | Hide methods in Run Method dialog | `miyako-refactored-system` | Claude Sonnet 5 | 972,747 | 6,661 | 17 |
 | Modernise startup dialog | `miyako-modernise-startup-dialog` | Claude Opus 4.6 | 1,399,941 | 9,514 | 28 |
