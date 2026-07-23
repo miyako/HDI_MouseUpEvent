@@ -1,8 +1,8 @@
 //%attributes = {}
-SET MENU BAR:C67(1)
-
 #DECLARE($title : Text)
 var $window : Integer
+
+SET MENU BAR:C67(1)
 
 Case of 
 	: (Count parameters:C259=0)
