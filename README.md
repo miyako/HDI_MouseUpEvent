@@ -16,18 +16,22 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 | Branch | Description | Instructions |
 |--------|-------------|--------------|
 | [`miyako-add-xliff-localisation`](../../tree/miyako-add-xliff-localisation) | Add XLIFF localisation: English source file and fix Japanese XLIFF | [localisation.instructions.md](.github/copilot/instructions/localisation.instructions.md) |
+| [`miyako-studious-invention`](../../tree/miyako-studious-invention) | Modernize c_* declarations to var syntax | [variable.declarations.instructions.md](.github/copilot/instructions/variable.declarations.instructions.md) |
 
 ## Copilot Token Usage
 
 | Session | Branch | Model(s) | Input Tokens | Output Tokens | Turns |
 |---------|--------|----------|-------------:|--------------:|------:|
 | Xliff localisation | `miyako-add-xliff-localisation` | Claude Opus 4.6 | 2,587,222 | 16,996 | 42 |
-| **Total** | | | **2,587,222** | **16,996** | **42** |
+| Modernize c_* declarations | `miyako-studious-invention` | Claude Sonnet 5 | 2,346,837 | 18,415 | 33 |
+| **Total** | | | **4,934,059** | **35,411** | **75** |
 
 ## Model Selection Assessment
 
-The XLIFF localisation task involved understanding 4D project structure, parsing/generating XLIFF XML, and applying language-specific rules — a moderately complex task. Claude Opus 4.6 was used for this session. For this type of structured file generation with domain-specific rules, Sonnet 5 would likely have been sufficient and more cost-effective.
+The XLIFF localisation task involved understanding 4D project structure, parsing/generating XLIFF XML, and applying language-specific rules -- a moderately complex task. Claude Opus 4.6 was used. For this type of structured file generation with domain-specific rules, Sonnet 5 would likely have been sufficient and more cost-effective.
 
-**Recommendation:** Use Sonnet 5 for similar structured file generation tasks in future.
+The declarations modernisation task was a mechanical find-and-replace refactor -- converting legacy `C_*` type declarations to modern `var` syntax across all methods. Claude Sonnet 5 was used, which was an appropriate choice for this pattern-based, repetitive task.
+
+**Recommendation:** Use Sonnet 5 for structured file generation and mechanical refactors. Reserve Opus for tasks requiring cross-file architectural reasoning or novel domain knowledge.
 
 ## Screenshots
