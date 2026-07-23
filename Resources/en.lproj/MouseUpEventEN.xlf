@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file datatype="plaintext" original="Project/Sources/Forms" source-language="en" target-language="ja">
+  <file datatype="plaintext" original="Project/Sources/Forms" source-language="en" target-language="en">
     <body>
       <trans-unit id="1" resname="Quit 4D">
         <source>Quit 4D</source>
-        <target>終了する</target>
+        <target>Quit 4D</target>
       </trans-unit>
       <trans-unit id="2" resname="Demo">
         <source>Demo</source>
-        <target>スタート</target>
+        <target>Demo</target>
       </trans-unit>
       <trans-unit id="3" resname="(4D v16 and above...)">
         <source>(4D v16 and above...)</source>
-        <target>(4D v16 以降...)</target>
+        <target>(4D v16 and above...)</target>
       </trans-unit>
       <trans-unit id="4" resname="How Do I...">
         <source>How Do I...</source>
-        <target>教えて...</target>
+        <target>How Do I...</target>
       </trans-unit>
       <trans-unit id="5" resname="Demo...">
         <source>Demo...</source>
-        <target>デモンストレーション...</target>
+        <target>Demo...</target>
       </trans-unit>
       <trans-unit id="6" resname="The plugin xxx is mandatory">
         <source>The plugin xxx is mandatory</source>
-        <target>プラグインxxxが必要です。</target>
+        <target>The plugin xxx is mandatory</target>
       </trans-unit>
       <trans-unit id="7" resname="Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.">
         <source>Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.</source>
-        <target>このHDIをデザインモードで開いてはなりません。開いてしまった場合，フォームやメソッドが不完全になってしまう恐れがあります。</target>
+        <target>Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.</target>
       </trans-unit>
       <trans-unit id="8" resname="Sorry">
         <source>Sorry, this &quot;How do I...&quot; (HDI) &#x0D;example must be used with&#x0D;a newer version of 4D&#x0D;(v16 and above).</source>
-        <target>申し訳ありません。この&quot;How do I...&quot; (HDI) &#x0D;サンプルは，より新しいバージョンの4D（v16以降）で開かなければなりません。</target>
+        <target>Sorry, this &quot;How do I...&quot; (HDI) &#x0D;example must be used with&#x0D;a newer version of 4D&#x0D;(v16 and above).</target>
       </trans-unit>
       <trans-unit id="9" resname="... use DISTINCT VALUE with count (new parameter)?">
         <source>... use DISTINCT VALUE with count (new parameter)?</source>
-        <target>... DISTINCT VALUEの新しい引数を活用するには?</target>
+        <target>... use DISTINCT VALUE with count (new parameter)?</target>
       </trans-unit>
       <trans-unit id="10" resname="Page 1">
         <source>Page 1</source>
-        <target>ページ 1</target>
+        <target>Page 1</target>
       </trans-unit>
       <trans-unit id="11" resname="Page 2">
         <source>Page 2</source>
-        <target>ページ 2</target>
+        <target>Page 2</target>
       </trans-unit>
       <trans-unit id="12" resname="Page 3">
         <source>Page 3</source>
-        <target>ページ 3</target>
+        <target>Page 3</target>
       </trans-unit>
       <trans-unit id="13" resname="Clear">
         <source>Clear</source>
-        <target>クリア</target>
+        <target>Clear</target>
       </trans-unit>
       <trans-unit id="14" resname="Clear SVG">
         <source>Clear SVG</source>
-        <target>SVGをクリア</target>
+        <target>Clear SVG</target>
       </trans-unit>
       <trans-unit id="15" resname="Event">
         <source>Event</source>
-        <target>イベント</target>
+        <target>Event</target>
       </trans-unit>
       <trans-unit id="16" resname="Coordinates">
         <source>Coordinates</source>
-        <target>座標</target>
+        <target>Coordinates</target>
       </trans-unit>
       <trans-unit id="17" resname="... use the new event &quot;On Mouse Up&quot;?">
         <source>... use the new event &quot;On Mouse Up&quot;?</source>
-        <target>... &quot;On Mouse Up&quot;イベント?</target>
+        <target>... use the new event &quot;On Mouse Up&quot;?</target>
       </trans-unit>
     </body>
   </file>
