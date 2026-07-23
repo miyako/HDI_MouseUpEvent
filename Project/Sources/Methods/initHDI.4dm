@@ -1,11 +1,17 @@
 //%attributes = {"invisible":true}
+var $json : Collection
+$json:=JSON Parse:C1218(File:C1566(Localized document path:C1105("SAMPLES.json"); fk platform path:K87:2).getText())
+$json:=$json.orderBy("SampleSort asc")
+
 ARRAY TEXT:C222(TabControl; 0)
 ARRAY TEXT:C222(TextTabControl; 0)
-ALL RECORDS:C47([SAMPLES:3])
-ORDER BY:C49([SAMPLES:3]; [SAMPLES:3]SampleSort:4; >)
-SELECTION TO ARRAY:C260([SAMPLES:3]Title:2; TabControl)
-SELECTION TO ARRAY:C260([SAMPLES:3]Text:3; TextTabControl)
-UNLOAD RECORD:C212([SAMPLES:3])
+COLLECTION TO ARRAY:C1562($json; TabControl; "Title"; TextTabControl; "Text")
+
+//ALL RECORDS([SAMPLES])
+//ORDER BY([SAMPLES]; [SAMPLES]SampleSort; >)
+//SELECTION TO ARRAY([SAMPLES]Title; TabControl)
+//SELECTION TO ARRAY([SAMPLES]Text; TextTabControl)
+//UNLOAD RECORD([SAMPLES])
 
 TabControl:=0
 Var1:=TextTabControl{1}
