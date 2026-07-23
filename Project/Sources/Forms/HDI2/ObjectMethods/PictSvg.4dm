@@ -85,7 +85,7 @@ Case of
 				beginY:=orig_Y+height
 			End if 
 			
-			RectRef:=SVG_New_rect(svgRef; begin_X; beginY; Abs:C99(width); Abs:C99(height); 0; 0; "black"; "black:10")
+			RectRef:=SVG_New_rect(svgRef; begin_X; beginY; Abs:C99(width); Abs:C99(height); 0; 0; vSvgFillColor; vSvgFillColor+":10")
 			vPictSvg:=SVG_Export_to_picture(svgRef)
 			
 			orig_X:=-1

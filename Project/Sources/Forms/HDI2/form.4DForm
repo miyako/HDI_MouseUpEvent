@@ -50,6 +50,15 @@
 					"events": [
 						"onClick"
 					]
+				},
+				"refSvgRectColour": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1,
+					"height": 1,
+					"class": "ref-svg-colour",
+					"stroke": "transparent"
 				}
 			}
 		},
@@ -137,10 +146,10 @@
 					"top": 119,
 					"left": 572,
 					"width": 108,
-					"height": 22,
 					"sizingX": "move",
 					"text": ":xliff:Clear SVG",
 					"focusable": false,
+					"class": "default",
 					"method": "ObjectMethods/Button1.4dm",
 					"events": [
 						"onClick"
@@ -178,7 +187,7 @@
 							"maxWidth": 32000,
 							"stroke": "automatic",
 							"fill": "automatic",
-							"alternateFill": "automatic",
+							"alternateFill": "automaticAlternate",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -207,7 +216,7 @@
 							"maxWidth": 32000,
 							"stroke": "automatic",
 							"fill": "automatic",
-							"alternateFill": "automatic",
+							"alternateFill": "automaticAlternate",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -236,9 +245,9 @@
 					"top": 119,
 					"left": 201,
 					"width": 77,
-					"height": 22,
 					"text": ":xliff:Clear",
 					"focusable": false,
+					"class": "default",
 					"method": "ObjectMethods/Button2.4dm",
 					"events": [
 						"onClick"
@@ -307,7 +316,7 @@
 							"maxWidth": 32000,
 							"stroke": "automatic",
 							"fill": "automatic",
-							"alternateFill": "automatic",
+							"alternateFill": "automaticAlternate",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -336,7 +345,7 @@
 							"maxWidth": 32000,
 							"stroke": "automatic",
 							"fill": "automatic",
-							"alternateFill": "automatic",
+							"alternateFill": "automaticAlternate",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -365,9 +374,9 @@
 					"top": 119,
 					"left": 201,
 					"width": 77,
-					"height": 22,
 					"text": ":xliff:Clear",
 					"focusable": false,
+					"class": "default",
 					"method": "ObjectMethods/Button.4dm",
 					"events": [
 						"onClick"

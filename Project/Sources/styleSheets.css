@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: light) {
+	.warning {
+		stroke: #FF4D00;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.warning {
+		stroke: #FF8A5C;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.ref-svg-colour {
+		fill: #000000;
+		visibility: hidden;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.ref-svg-colour {
+		fill: #FFFFFF;
+		visibility: hidden;
+	}
+}
