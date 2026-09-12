@@ -1,17 +1,54 @@
+![version](https://img.shields.io/badge/version-20%2B-E23089)
+![platform](https://img.shields.io/static/v1?label=platform&message=mac-intel%20|%20mac-arm%20|%20win-64&color=blue)
+
 # HDI_MouseUpEvent
 
-A 4D v16 **HDI** (How Do I) binary database demonstrating a new form event, converted to a 4D project using 4D 21. The codebase was then updated and cleaned up with the help of **GitHub Copilot**.
+The `On Mouse Up` form event for picture objects, used to implement click-and-drag interactions. Originally published by 4D as a **HDI** (*How Do I*) example for **4D v17**; converted from the binary `.4DB` to the `.4DProject` architecture so it runs on current 4D releases.
 
-## Origin
+## What it demonstrates
 
-This project started as a binary `.4DB` example database originally distributed with 4D v16. It was converted to the modern project architecture (`.4DProject`) using 4D 21's built-in binary-to-project conversion tool.
+- Handling the `On Mouse Up` event on picture objects, alongside `On Clicked` and `On Mouse Move`, to track a full press-drag-release gesture.
+- Reading the pointer position during a gesture from the `MouseX` / `MouseY` automatic variables and `MOUSE POSITION`.
+- Distinguishing an in-progress drag from a completed one with `Is waiting mouse up`.
+- A simple example: rubber-band drawing of an SVG rectangle whose ghost outline follows the mouse and is committed on release.
+- An advanced example: dragging one picture over another, recompositing with `COMBINE PICTURES`, with edge auto-scrolling driven by `SET TIMER` / `On Timer`.
+- Logging each mouse event to a list box, highlighting the `On Mouse Up` row in green.
 
-- **Blog post:** [New “On mouse up” event for picture object](https://blog.4d.com/new-on-mouse-up-event-for-picture-object/)
-- **Original download:** [HDI_Mouse_Up_Event.zip](https://downloads.4d.com/Demos/4D_v17/HDI_Mouse_Up_Event.zip)
+## Key commands
 
-## Branches
+| Command | Used for |
+|---|---|
+| `Is waiting mouse up` | Detecting whether the mouse button is still held during a drag |
+| `MOUSE POSITION` | Reading pointer coordinates and button state during auto-scroll |
+| `COMBINE PICTURES` | Superimposing the dragged image onto the background at the drop point |
+| `SET TIMER` | Driving `On Timer` auto-scroll while the pointer is at a panel edge |
+| `OBJECT GET SCROLL POSITION` / `OBJECT SET SCROLL POSITION` | Scrolling the picture object during an edge drag |
+| `SVG SET ATTRIBUTE` | Resizing the ghost rectangle as the mouse moves |
+| `LISTBOX INSERT ROWS` / `LISTBOX SET ROW COLOR` | Logging events and highlighting `On Mouse Up` |
 
-Each branch represents a distinct modernisation effort, guided by a corresponding Copilot instruction file.
+## How it works
+
+The startup method `Project/Sources/Methods/00_Start.4dm` opens the standard `HDI` splash form, whose `BtnDemo` object method opens the demo form `HDI2`.
+
+`Project/Sources/Forms/HDI2/method.4dm` initialises both examples on `On Load`: it loads two images from the resources folder with `READ PICTURE FILE`, builds a 500x500 SVG document, and sets up the event-log arrays. It also relays `On Timer` to `doTracking` for auto-scroll.
+
+There are two object methods to read:
+
+- `Project/Sources/Forms/HDI2/ObjectMethods/PictSvg.4dm` (simple example). `On Clicked` records the origin and creates a 1x1 ghost rect; `On Mouse Move` resizes it via `SVG SET ATTRIBUTE` while `Is waiting mouse up` is true; `On Mouse Up` commits a final coloured rectangle. This is the clearest illustration of the event -- start here.
+- `Project/Sources/Forms/HDI2/ObjectMethods/Picture.4dm` (advanced example). `On Clicked` begins tracking when the click lands inside the draggable image; `On Mouse Move` repositions it and, when the pointer leaves the object, arms `SET TIMER` for auto-scroll; `On Mouse Up` finalises the position and recomposites with `COMBINE PICTURES`.
+
+`Project/Sources/Methods/logEvent.4dm` names each event code and appends a row to the relevant list box, colouring `On Mouse Up` rows green. `Project/Sources/Methods/doTracking.4dm` implements the edge auto-scroll using `MOUSE POSITION`, `OBJECT GET COORDINATES` and the scroll-position commands.
+
+## Points of interest
+
+- `On Mouse Up` fires once at the end of a gesture, whereas the earlier idiom relied on polling `Is waiting mouse up` inside `On Mouse Move`; the demo shows both working together.
+- During a drag, `MouseX` / `MouseY` return `-1` when the pointer leaves the object -- both object methods branch on this to trigger timer-based auto-scroll.
+- Auto-scroll is not driven by the mouse event itself but by `SET TIMER(1)` re-entering through `On Timer`, because no mouse events fire while the button is held still outside the object.
+- The ghost rectangle keeps a fixed id (`ghostRect`) so `SVG SET ATTRIBUTE` can mutate it in place instead of rebuilding the SVG each move.
+
+## Modernisation notes
+
+Converted from the 4D v17 binary `.4DB` to the `.4DProject` architecture. Each branch below is an isolated modernisation step.
 
 | Branch | Description | Instructions |
 |--------|-------------|--------------|
@@ -22,33 +59,15 @@ Each branch represents a distinct modernisation effort, guided by a correspondin
 | [`miyako-modernise-startup-dialog`](../../tree/miyako-modernise-startup-dialog) | Modernise startup dialog | [startup.instructions.md](.github/instructions/startup.instructions.md) |
 | [`miyako-dark-mode-liquid-glass`](../../tree/miyako-dark-mode-liquid-glass) | Dark mode + liquid glass CSS styling | [css.instructions.md](.github/instructions/css.instructions.md), [tahoe.css.instructions.md](.github/instructions/tahoe.css.instructions.md) |
 
-## Copilot Token Usage
+## References
 
-| Session | Branch | Model(s) | Input Tokens | Output Tokens | Turns |
-|---------|--------|----------|-------------:|--------------:|------:|
-| Xliff localisation | `miyako-add-xliff-localisation` | Claude Opus 4.6 | 2,587,222 | 16,996 | 42 |
-| Modernise c_* declarations | `miyako-studious-invention` | Claude Sonnet 5 | 2,346,837 | 18,415 | 33 |
-| Menu actions migration | `miyako-menu-standard-actions` | Claude Sonnet 5 | 1,299,064 | 7,244 | 23 |
-| Hide methods in Run Method dialog | `miyako-refactored-system` | Claude Sonnet 5 | 972,747 | 6,661 | 17 |
-| Modernise startup dialog | `miyako-modernise-startup-dialog` | Claude Opus 4.6 | 1,399,941 | 9,514 | 28 |
-| Dark mode + liquid glass | `miyako-dark-mode-liquid-glass` | Claude Sonnet 5 | 4,884,992 | 32,893 | 51 |
-| **Total** | | | **13,490,803** | **91,723** | **194** |
-
-## Model Selection Assessment
-
-The XLIFF localisation task involved understanding 4D project structure, parsing/generating XLIFF XML, and applying language-specific rules -- a moderately complex task. Claude Opus 4.6 was used. For this type of structured file generation with domain-specific rules, Sonnet 5 would likely have been sufficient and more cost-effective.
-
-The declarations modernisation task was a mechanical find-and-replace refactor -- converting legacy `C_*` type declarations to modern `var` syntax across all methods. Claude Sonnet 5 was used, which was an appropriate choice for this pattern-based, repetitive task.
-
-The menu actions migration was a well-scoped task -- replacing custom menu method calls with 4D standard actions, guided by a clear instruction file. Claude Sonnet 5 was used, which was appropriate for this moderate, rule-driven refactor.
-
-The method visibility task involved setting JSON attributes on method files to hide subroutines from the Run Method dialog -- a simple, mechanical edit. Claude Sonnet 5 was used, which was appropriate though Haiku 4.5 might have sufficed for this trivial property-setting task.
-
-The startup dialog modernisation involved updating form objects and associated method logic for the application's startup workflow. Claude Opus 4.6 was used. This was a moderate task with some UI/form reasoning, but Sonnet 5 would likely have been sufficient given the clear instruction file.
-
-The dark mode and liquid glass session was the largest by token count (4.9M input, 51 turns), involving CSS stylesheet generation with dark mode media queries and macOS Tahoe liquid glass adaptations. Claude Sonnet 5 was used, which was appropriate -- this was a moderate task with clear instruction files, though the high turn count suggests iterative refinement.
-
-**Recommendation:** Use Sonnet 5 for structured file generation, mechanical refactors, and rule-driven migrations. Reserve Opus for tasks requiring cross-file architectural reasoning or novel domain knowledge.
+- [4D blog: New "On mouse up" event for picture object](https://blog.4d.com/new-on-mouse-up-event-for-picture-object/)
+- [4D documentation: Is waiting mouse up](https://developer.4d.com/docs/commands/is-waiting-mouse-up)
+- [4D documentation: COMBINE PICTURES](https://developer.4d.com/docs/commands/combine-pictures)
+- [4D documentation: SET TIMER](https://developer.4d.com/docs/commands/set-timer)
+- [4D documentation: MOUSE POSITION](https://developer.4d.com/docs/commands/mouse-position)
+- Original download: [HDI_Mouse_Up_Event.zip](https://downloads.4d.com/Demos/4D_v17/HDI_Mouse_Up_Event.zip)
+- Index of v16/v17 HDIs: [miyako/4d-hdi](https://github.com/miyako/4d-hdi)
 
 ## Screenshots
 
