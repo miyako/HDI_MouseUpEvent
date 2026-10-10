@@ -50,14 +50,14 @@ There are two object methods to read:
 
 Converted from the 4D v17 binary `.4DB` to the `.4DProject` architecture. Each branch below is an isolated modernisation step.
 
-| Branch | Description | Instructions |
-|--------|-------------|--------------|
-| [`miyako-add-xliff-localisation`](../../tree/miyako-add-xliff-localisation) | Add XLIFF localisation: English source file and fix Japanese XLIFF | [localisation.instructions.md](.github/instructions/localisation.instructions.md) |
-| [`miyako-studious-invention`](../../tree/miyako-studious-invention) | Modernise c_* declarations to var syntax | [variable.declarations.instructions.md](.github/instructions/variable.declarations.instructions.md) |
-| [`miyako-menu-standard-actions`](../../tree/miyako-menu-standard-actions) | Migrate menu bar to use standard actions | [menu.instructions.md](.github/instructions/menu.instructions.md) |
-| [`miyako-refactored-system`](../../tree/miyako-refactored-system) | Hide methods in Run Method dialog | [method.visibility.instructions.md](.github/instructions/method.visibility.instructions.md) |
-| [`miyako-modernise-startup-dialog`](../../tree/miyako-modernise-startup-dialog) | Modernise startup dialog | [startup.instructions.md](.github/instructions/startup.instructions.md) |
-| [`miyako-dark-mode-liquid-glass`](../../tree/miyako-dark-mode-liquid-glass) | Dark mode + liquid glass CSS styling | [css.instructions.md](.github/instructions/css.instructions.md), [tahoe.css.instructions.md](.github/instructions/tahoe.css.instructions.md) |
+| Branch | Description | Guidance |
+|--------|-------------|----------|
+| [`miyako-add-xliff-localisation`](../../tree/miyako-add-xliff-localisation) | Add XLIFF localisation: English source file and fix Japanese XLIFF | [`4dlocalise`](https://github.com/miyako/skills/tree/main/4d-skills/skills/4dlocalise) |
+| [`miyako-studious-invention`](../../tree/miyako-studious-invention) | Modernise c_* declarations to var syntax | [`4dmodernise`](https://github.com/miyako/skills/tree/main/4d-skills/skills/4dmodernise) |
+| [`miyako-menu-standard-actions`](../../tree/miyako-menu-standard-actions) | Migrate menu bar to use standard actions | [`4dproject`](https://github.com/miyako/skills/tree/main/4d-skills/skills/4dproject) |
+| [`miyako-refactored-system`](../../tree/miyako-refactored-system) | Hide methods in Run Method dialog | [`4dmethods`](https://github.com/miyako/skills/tree/main/4d-skills/skills/4dmethods) |
+| [`miyako-modernise-startup-dialog`](../../tree/miyako-modernise-startup-dialog) | Modernise startup dialog | [`4dstartup`](https://github.com/miyako/skills/tree/main/4d-skills/skills/4dstartup), [hdi.startup.instructions.md](.github/instructions/hdi.startup.instructions.md) |
+| [`miyako-dark-mode-liquid-glass`](../../tree/miyako-dark-mode-liquid-glass) | Dark mode + liquid glass CSS styling | [`4dcss`](https://github.com/miyako/skills/tree/main/4d-skills/skills/4dcss) |
 
 ## References
 
